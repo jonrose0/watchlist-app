@@ -58,7 +58,6 @@ type ReleaseDatesResult = {
 
 type ReleaseDate = {
   certification: string;
-  descriptors: any[];
   iso_639_1: string;
   note: string;
   release_date: Date;
@@ -92,7 +91,6 @@ type ContentRatings = {
 };
 
 type ContentRatingsResult = {
-  descriptors: any[];
   iso_3166_1: string;
   rating: string;
 };
