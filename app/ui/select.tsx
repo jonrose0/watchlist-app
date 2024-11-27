@@ -10,7 +10,7 @@ export default function Select({
   status: string;
   watchlist: {
     id: number;
-    title: string;
+    title: string | undefined;
     poster_path: string;
     type: string;
     status: string;
@@ -19,7 +19,7 @@ export default function Select({
     React.SetStateAction<
       {
         id: number;
-        title: string;
+        title: string | undefined;
         poster_path: string;
         type: string;
         status: string;

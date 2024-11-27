@@ -1,6 +1,6 @@
 export type watchlistProps = {
   id: number;
-  title: string;
+  title: string | undefined;
   poster_path: string;
   type: string;
   status: string;
