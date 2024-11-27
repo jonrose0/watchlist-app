@@ -4,12 +4,7 @@ import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { fetchTV } from "../lib/actions";
 import Grid from "./media-grid";
-
-type dataProps = {
-  id: number;
-  title: string;
-  poster_path: string;
-};
+import { DataProps } from "../lib/types";
 
 let page = 2;
 
@@ -29,7 +24,7 @@ export default function LoadMore({
   maxDate: string;
 }) {
   const { ref, inView } = useInView();
-  const [data, setData] = useState<dataProps[]>([]);
+  const [data, setData] = useState<DataProps[]>([]);
   const [post, setPost] = useState<
     {
       id: string;

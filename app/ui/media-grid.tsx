@@ -3,6 +3,7 @@
 import Link from "next/link";
 import BookMark from "./bookmark";
 import { useEffect, useState } from "react";
+import { DataProps } from "../lib/types";
 
 function getStorage() {
   const storage = localStorage.getItem("watchlist");
@@ -10,11 +11,17 @@ function getStorage() {
   return storage ? JSON.parse(storage) : [];
 }
 
-export default function Grid({ data, type }: { data: any; type: string }) {
+export default function Grid({
+  data,
+  type,
+}: {
+  data: DataProps[];
+  type: string;
+}) {
   const [watchlist, setWatchlist] = useState<
     {
       id: number;
-      title: string;
+      title: string | undefined;
       poster_path: string;
       type: string;
       status: string;
@@ -27,7 +34,7 @@ export default function Grid({ data, type }: { data: any; type: string }) {
 
   return (
     <>
-      {data.map((item: any) => {
+      {data.map((item) => {
         return (
           <div
             key={item.id}

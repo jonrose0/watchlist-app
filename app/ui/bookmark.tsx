@@ -6,12 +6,12 @@ import { FaRegStar, FaStar } from "react-icons/fa";
 type Props = {
   marked: boolean;
   id: number;
-  title: string;
+  title: string | undefined;
   poster_path: string;
   type: string;
   watchlist: {
     id: number;
-    title: string;
+    title: string | undefined;
     poster_path: string;
     type: string;
     status: string;
@@ -20,7 +20,7 @@ type Props = {
     React.SetStateAction<
       {
         id: number;
-        title: string;
+        title: string | undefined;
         poster_path: string;
         type: string;
         status: string;

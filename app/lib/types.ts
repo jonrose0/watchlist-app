@@ -19,6 +19,13 @@ export type MovieData = {
   "watch/providers": WatchProviders;
 };
 
+export type DataProps = {
+  id: number;
+  title?: string;
+  name?: string;
+  poster_path: string;
+};
+
 export type ShowData = {
   name: string;
   poster_path: string;
