@@ -10,9 +10,9 @@ export default function Home() {
           <div className="relative z-10 flex max-w-md flex-col items-center gap-4 text-center md:items-start md:text-left">
             <p className="flex-1">
               Curate your cinematic journey with a diverse mix of genres,
-              directors, and eras. With every movie added, you're building a
-              personal anthology of storytelling, ensuring endless entertainment
-              at your fingertips.
+              directors, and eras. With every movie added, you&apos;re building
+              a personal anthology of storytelling, ensuring endless
+              entertainment at your fingertips.
             </p>
             <Link
               href="/movies"

@@ -54,7 +54,7 @@ export default function FilterGenre({
       >
         <div className="mb-8 flex justify-between">
           <h3>Genres</h3>
-          <button onClick={(e) => handleFilter(undefined, "genre")}>
+          <button onClick={() => handleFilter(undefined, "genre")}>
             clear filters
           </button>
         </div>
@@ -65,7 +65,7 @@ export default function FilterGenre({
               <button
                 key={genre.id}
                 className=""
-                onClick={(e) => handleFilter(genre.id, "genre")}
+                onClick={() => handleFilter(genre.id, "genre")}
               >
                 {genre.name}
               </button>

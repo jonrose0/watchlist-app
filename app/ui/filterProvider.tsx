@@ -60,7 +60,7 @@ export default function FilterProvider({
       >
         <div className="mb-8 flex justify-between">
           <h3>Providers</h3>
-          <button onClick={(e) => handleFilter(undefined, "provider")}>
+          <button onClick={() => handleFilter(undefined, "provider")}>
             clear filters
           </button>
         </div>
@@ -71,9 +71,7 @@ export default function FilterProvider({
               return (
                 <button
                   key={provider.provider_id}
-                  onClick={(e) =>
-                    handleFilter(provider.provider_id, "provider")
-                  }
+                  onClick={() => handleFilter(provider.provider_id, "provider")}
                 >
                   <img
                     src={`http://image.tmdb.org/t/p/w780${provider.logo_path}`}
@@ -87,7 +85,7 @@ export default function FilterProvider({
                 i < 10 && (
                   <button
                     key={provider.id}
-                    onClick={(e) => handleFilter(provider.id, "provider")}
+                    onClick={() => handleFilter(provider.id, "provider")}
                   >
                     {provider.name}
                   </button>

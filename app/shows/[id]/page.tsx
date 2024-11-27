@@ -1,6 +1,7 @@
 import { fetchShow } from "@/app/lib/data";
 import { ShowData } from "@/app/lib/types";
 import Provider from "@/app/ui/provider";
+import Image from "next/image";
 
 export default async function Page({ params }: { params: { id: string } }) {
   const id = params.id;
@@ -9,7 +10,7 @@ export default async function Page({ params }: { params: { id: string } }) {
   return (
     <div className="mx-auto grid max-w-7xl gap-y-3 px-4 py-20 sm:grid-cols-2 sm:grid-rows-[repeat(4,_auto)_1fr] sm:gap-x-12 sm:p-4 sm:px-8 lg:grid-cols-3 lg:grid-rows-[auto_auto_auto_1fr]">
       <div className="mx-auto max-w-96 sm:row-span-4 sm:mx-0 sm:max-w-none">
-        <img
+        <Image
           className="w-full"
           src={`http://image.tmdb.org/t/p/w342${data.poster_path}`}
           alt=""

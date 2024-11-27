@@ -19,7 +19,7 @@ type Props = {
 
 export default async function Page({ searchParams }: Props) {
   const query = searchParams?.query || "";
-  const currentPage = searchParams?.page || 1;
+  // const currentPage = searchParams?.page || 1;
   const sort = searchParams?.sort || "";
   const genre = searchParams?.genre || "";
   const provider = searchParams?.provider || "";
